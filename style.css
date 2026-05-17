@@ -1,0 +1,158 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:#0f172a;
+    color:white;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#111827;
+    border-bottom:1px solid #1e293b;
+}
+
+nav h2{
+    color:#38bdf8;
+    font-size:30px;
+}
+
+.links{
+    display:flex;
+    gap:25px;
+}
+
+.links a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    transition:0.3s;
+}
+
+.links a:hover{
+    color:#38bdf8;
+}
+
+/* MAIN BOX */
+
+.container,
+.about-box{
+    width:90%;
+    max-width:500px;
+    margin:70px auto;
+    background:#111827;
+    padding:40px;
+    border-radius:20px;
+    border:1px solid #1e293b;
+    box-shadow:0 0 30px rgba(0,0,0,0.4);
+}
+
+/* TITLES */
+
+h1{
+    text-align:center;
+    margin-bottom:15px;
+    font-size:40px;
+}
+
+.subtitle{
+    text-align:center;
+    margin-bottom:30px;
+    color:#cbd5e1;
+}
+
+/* FORM */
+
+label{
+    display:block;
+    margin-top:20px;
+    margin-bottom:10px;
+    color:#e2e8f0;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    background:#1e293b;
+    color:white;
+    font-size:16px;
+}
+
+input::placeholder{
+    color:#94a3b8;
+}
+
+/* BUTTON */
+
+button{
+    width:100%;
+    margin-top:30px;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#2563eb;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#3b82f6;
+}
+
+/* RESULT */
+
+.result{
+    margin-top:30px;
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+/* ABOUT */
+
+.about-box p{
+    margin-top:20px;
+    line-height:1.8;
+    color:#cbd5e1;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    nav{
+        padding:20px;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    h1{
+        font-size:32px;
+    }
+
+    .container,
+    .about-box{
+        padding:30px;
+    }
+
+}

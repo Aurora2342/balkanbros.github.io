@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Date Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <h2>DateCalc</h2>
+
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <h1>Date Calculator</h1>
+
+    <p class="subtitle">
+      Add days to any date instantly.
+    </p>
+
+    <label>Choose Date</label>
+    <input type="date" id="startDate">
+
+    <label>Number Of Days</label>
+    <input type="number" id="days" placeholder="Example: 120">
+
+    <button onclick="calculateDate()">
+      Calculate
+    </button>
+
+    <div class="result" id="result"></div>
+
+  </div>
+
+<script>
+
+function calculateDate(){
+
+  const startDate =
+  document.getElementById("startDate").value;
+
+  const days =
+  parseInt(document.getElementById("days").value);
+
+  const result =
+  document.getElementById("result");
+
+  if(!startDate || isNaN(days)){
+
+    result.innerHTML =
+    "Please enter a date and number.";
+
+    return;
+  }
+
+  const date = new Date(startDate);
+
+  date.setDate(date.getDate() + days);
+
+  const options = {
+    day:"numeric",
+    month:"long",
+    year:"numeric"
+  };
+
+  result.innerHTML =
+  date.toLocaleDateString("en-US", options);
+
+}
+
+</script>
+
+</body>
+</html>
